@@ -16,6 +16,8 @@ struct ContentView: View {
 
     @State var showCharacters = false
     @State var showShips = false
+    @State var chooseGuild = false
+    @State var test = false
     
     var body: some View {
         VStack(spacing: 20) {
@@ -41,6 +43,18 @@ struct ContentView: View {
             }.sheet(isPresented: $showShips){
                 ShipView()
             }
+            Button(action: {
+                self.chooseGuild.toggle()
+            }) {
+                Text("Select Guild")
+                .padding(12)
+                .foregroundColor(Color.white)
+                .background(Color.purple)
+                .cornerRadius(8)
+            }.sheet(isPresented: $chooseGuild){
+                GuildChooser()
+            }
+            
         }
         
     }
