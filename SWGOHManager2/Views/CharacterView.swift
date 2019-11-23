@@ -68,7 +68,7 @@ struct CharacterView: View {
                    VStack{
                        imageView(url: "https://swgoh.gg" + character.image)
                        Text(character.name)
-                           Text("More about " + character.name)
+//                           Text("More about " + character.name)
                        }
                    }
 

@@ -43,8 +43,6 @@ struct GuildView: View {
     var players: Players
     var rarity: Int
     var character, ship: String
-//    var character: Character
-//    @State var mass = [String]()
     @State var isPressed: Bool = false
     
     var body: some View{
@@ -102,17 +100,9 @@ func test(players: Players, character: String, ship: String, rarity: Int) -> [St
         for unit in player.units{
             if ((unit.data.rarity == rarity) && ((unit.data.name == character) || (unit.data.name == ship))){
                 mass.append(player.data.name)
-//                print(player.data.name)
             }
         }
     }
-    print(mass)
+//    print(mass)
     return mass
-//    return List(mass, id:\.self){ player in
-//        Text(player)
-//    }
-//    return Text("test")
-//    print("test")
-//    return mass
-    
 }

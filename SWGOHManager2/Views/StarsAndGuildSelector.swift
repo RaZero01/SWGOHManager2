@@ -11,7 +11,7 @@ import SwiftUI
 struct StarsAndGuildSelector: View {
     @State private var stars: Int = 4
     var character: String
-    
+    var ship: String
     
     @State var spin3D_x = false
     @State var spin3D_y = false
@@ -65,7 +65,7 @@ struct StarsAndGuildSelector: View {
                         }.sheet(isPresented: $showGuild){
                             
                             if (self.guildData != nil){
-                                GuildView(guild: self.guildData!, players: self.playersData!, rarity: self.stars, character: self.character, ship: "")
+                                GuildView(guild: self.guildData!, players: self.playersData!, rarity: self.stars, character: self.character, ship: self.ship)
                             } else{
                                 ZStack{
                                     RadialGradient(gradient: Gradient(colors: [Color.white, Color.blue]), center: .center, startRadius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/, endRadius: /*@START_MENU_TOKEN@*/500/*@END_MENU_TOKEN@*/)
@@ -105,11 +105,3 @@ struct StarsAndGuildSelector: View {
         }
     }
 }
-
-//
-//
-//struct StarsAndGuildSelector_Previews: PreviewProvider {
-//    static var previews: some View {
-//        StarsAndGuildSelector()
-//    }
-//}

@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.8.1)
+  - Alamofire (4.9.1)
   - MBCircularProgressBar (0.3.5)
   - UICircularProgressRing (6.4.0)
 
@@ -15,7 +15,7 @@ SPEC REPOS:
     - UICircularProgressRing
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   UICircularProgressRing: 907613633e76e561b972a3868c95517d14c71006
 

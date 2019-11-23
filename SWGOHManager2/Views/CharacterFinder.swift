@@ -17,25 +17,13 @@ struct CharacterFinder: View {
            var body: some View {
                NavigationView{
                 List{
-
                     SearchBar(text: $searchTerm)
-                    
                     ForEach(charactersNetworkManager.characters.filter{
                         self.searchTerm.isEmpty ? true : $0.name.localizedCaseInsensitiveContains(self.searchTerm)
                         }, id: \.self){ character in
-
-                            NavigationLink(destination: StarsAndGuildSelector(character: character.name)){
+                            NavigationLink(destination: StarsAndGuildSelector(character: character.name, ship: "")){
                        CharactersView(character: character)
-
                             }
-//                            Button(action: {
-//                                self.characterFinder.toggle()
-//                                print("test")
-//                            }) {
-//                                CharactersView(character: character)
-//                            }.sheet(isPresented: self.$characterFinder){
-//                                CharacterFinder()
-//                            }
                }.navigationBarTitle(Text("Characters"))
                }
             }
@@ -48,7 +36,7 @@ struct CharacterFinder: View {
                    VStack{
                        imageView(url: "https://swgoh.gg" + character.image)
                        Text(character.name)
-                           Text("Find " + character.name)
+//                           Text("Find " + character.name)
                        }
                    }
 

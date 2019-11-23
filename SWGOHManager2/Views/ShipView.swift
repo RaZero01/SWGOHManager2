@@ -66,7 +66,7 @@ struct ShipView: View {
             VStack{
                 imageView(url: "https://swgoh.gg" + ship.image)
                 Text(ship.name)
-                    Text("More about " + ship.name)
+//                    Text("More about " + ship.name)
                 }
             }
 

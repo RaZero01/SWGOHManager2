@@ -18,6 +18,7 @@ struct ContentView: View {
     @State var showShips = false
     @State var chooseGuild = false
     @State var characterFinder = false
+    @State var shipFinder = false
     
     var body: some View {
         VStack(spacing: 20) {
@@ -64,6 +65,17 @@ struct ContentView: View {
                 .cornerRadius(8)
             }.sheet(isPresented: $characterFinder){
                 CharacterFinder()
+            }
+            Button(action: {
+                self.shipFinder.toggle()
+            }) {
+                Text("Find Ship")
+                .padding(12)
+                .foregroundColor(Color.white)
+                .background(Color.orange)
+                .cornerRadius(8)
+            }.sheet(isPresented: $shipFinder){
+                ShipFinder()
             }
         }
     }
