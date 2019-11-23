@@ -72,12 +72,12 @@ struct GuildChooser: View {
                 Text("Select Guild")
                 .padding(12)
                 .foregroundColor(Color.white)
-                .background(Color.purple)
+                .background(Color.orange)
                 .cornerRadius(8)
             }.sheet(isPresented: $showGuild){
                 
                 if (self.guildData != nil){
-                    GuildView(guild: self.guildData!, players: self.playersData!)
+                    GuildView(guild: self.guildData!, players: self.playersData!, rarity: 0, character: "", ship: "")
                 } else{
                     ZStack{
                         RadialGradient(gradient: Gradient(colors: [Color.white, Color.blue]), center: .center, startRadius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/, endRadius: /*@START_MENU_TOKEN@*/500/*@END_MENU_TOKEN@*/)

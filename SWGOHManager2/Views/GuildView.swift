@@ -16,8 +16,6 @@ struct Guild: Decodable {
         let name: String
         let member_count, id, galactic_power: Int
     }
-    
-    
 }
 
 struct Players: Decodable{
@@ -43,44 +41,78 @@ struct Players: Decodable{
 struct GuildView: View {
     var guild:Guild
     var players: Players
+    var rarity: Int
+    var character, ship: String
+//    var character: Character
+//    @State var mass = [String]()
     @State var isPressed: Bool = false
+    
     var body: some View{
         
+        let kek = test(players: players, character: character, ship: ship, rarity: rarity)
+        
+        return (
         VStack {
+            
+            Text("Guild: " + guild.data.name)
+                .font(.largeTitle)
             Button(action: {
-                print("test")
                 self.isPressed.toggle()
             }){
                 Text("Info")
+                    .padding(12)
+                    .foregroundColor(Color.white)
+                    .background(Color.orange)
+                    .cornerRadius(8)
             }
             if (isPressed){
                 VStack(spacing: 20){
-                                    Text("Guild: " + guild.data.name)
-                                        .font(.largeTitle)
-                                    Text("Galactic Power: " + String(guild.data.galactic_power))
-                                        .font(.title)
-                                    Text("Members: " + String(guild.data.member_count))
-                                        .font(.title)
-                                    Text("ID: " + String(guild.data.id))
-                                        .font(.title)
-                //                Text(players.players[0].data.name)
-                                
-                            }
-            }
-            List(players.players, id:\.data.name){ player in
-                HStack {
-                    Text(player.data.name)
-                    List(player.units, id:\.data.name){ unit in
-                            
-//                            Text(unit.data.name + ": " + String(unit.data.rarity))
-                        if (unit.data.rarity == 7){
-                            Text(unit.data.name)
-                        } else {
-                            Text("No data")
-                        }
-                    }
+                    
+                    Text("Galactic Power: " + String(guild.data.galactic_power))
+                        .font(.title)
+                    Text("Members: " + String(guild.data.member_count))
+                        .font(.title)
+                    Text("ID: " + String(guild.data.id))
+                        .font(.title)
+                    Text("Character: " + character)
+                        .font(.title)
+                    Text("Ship: " + ship)
+                        .font(.title)
+                    Text("Rarity: " + String(rarity))
+                        .font(.title)
                 }
+                
+            }
+            
+            List{
+                ForEach(kek, id:\.self){ player in
+                Text(player)
+                }
+            }
+
+        }
+        )
+    }
+}
+
+func test(players: Players, character: String, ship: String, rarity: Int) -> [String]{
+    var mass = [String]()
+    
+    for player in players.players{
+        for unit in player.units{
+            if ((unit.data.rarity == rarity) && ((unit.data.name == character) || (unit.data.name == ship))){
+                mass.append(player.data.name)
+//                print(player.data.name)
             }
         }
     }
+    print(mass)
+    return mass
+//    return List(mass, id:\.self){ player in
+//        Text(player)
+//    }
+//    return Text("test")
+//    print("test")
+//    return mass
+    
 }

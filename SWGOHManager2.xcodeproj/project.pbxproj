@@ -20,6 +20,9 @@
 		2B7DBC6523326C2C00395745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B7DBC6423326C2C00395745 /* Assets.xcassets */; };
 		2B7DBC6823326C2C00395745 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B7DBC6723326C2C00395745 /* Preview Assets.xcassets */; };
 		2B7DBC6B23326C2C00395745 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7DBC6923326C2C00395745 /* LaunchScreen.storyboard */; };
+		2BB2DF3623859EF000560DF9 /* StarsAndGuildSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB2DF3523859EF000560DF9 /* StarsAndGuildSelector.swift */; };
+		2BEE2C272380A44B006178E1 /* CharacterFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEE2C262380A44B006178E1 /* CharacterFinder.swift */; };
+		2BEE2C292380A47A006178E1 /* ShipFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEE2C282380A47A006178E1 /* ShipFinder.swift */; };
 		7AE403E4C4A7CC2281DB5E84 /* Pods_SWGOHManager2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B33C43A41BE5459BD757B2D /* Pods_SWGOHManager2.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 		2B7DBC6723326C2C00395745 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B7DBC6A23326C2C00395745 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B7DBC6C23326C2C00395745 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BB2DF3523859EF000560DF9 /* StarsAndGuildSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsAndGuildSelector.swift; sourceTree = "<group>"; };
+		2BEE2C262380A44B006178E1 /* CharacterFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFinder.swift; sourceTree = "<group>"; };
+		2BEE2C282380A47A006178E1 /* ShipFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipFinder.swift; sourceTree = "<group>"; };
 		4B33C43A41BE5459BD757B2D /* Pods_SWGOHManager2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWGOHManager2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73684F935F1BF1CD47694849 /* Pods-SWGOHManager2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWGOHManager2.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWGOHManager2/Pods-SWGOHManager2.release.xcconfig"; sourceTree = "<group>"; };
 		F2A90782C9239EB81E6838CB /* Pods-SWGOHManager2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWGOHManager2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWGOHManager2/Pods-SWGOHManager2.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +79,9 @@
 				2B4A5164236A035600A85266 /* ShipView.swift */,
 				2B4A516E236C982900A85266 /* GuildView.swift */,
 				2B4C139A2372E82100D1B7C7 /* GuildChooser.swift */,
+				2BEE2C262380A44B006178E1 /* CharacterFinder.swift */,
+				2BEE2C282380A47A006178E1 /* ShipFinder.swift */,
+				2BB2DF3523859EF000560DF9 /* StarsAndGuildSelector.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -255,8 +264,11 @@
 				2B4A5165236A035600A85266 /* ShipView.swift in Sources */,
 				2B4A5169236A356B00A85266 /* DetailShipInfo.swift in Sources */,
 				2B7DBC5F23326C2900395745 /* AppDelegate.swift in Sources */,
+				2BEE2C292380A47A006178E1 /* ShipFinder.swift in Sources */,
 				2B4C139B2372E82100D1B7C7 /* GuildChooser.swift in Sources */,
 				2B4A516F236C982900A85266 /* GuildView.swift in Sources */,
+				2BEE2C272380A44B006178E1 /* CharacterFinder.swift in Sources */,
+				2BB2DF3623859EF000560DF9 /* StarsAndGuildSelector.swift in Sources */,
 				2B7DBC6123326C2900395745 /* SceneDelegate.swift in Sources */,
 				2B4A516D236B742D00A85266 /* SearchBar.swift in Sources */,
 				2B4A51632369FD1700A85266 /* CharacterView.swift in Sources */,

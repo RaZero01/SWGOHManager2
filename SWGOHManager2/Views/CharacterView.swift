@@ -26,7 +26,6 @@ class CharactersNetworkManager: ObservableObject {
                 let characters = try JSONDecoder().decode([Character].self, from: data!)
                 DispatchQueue.main.async {
                     self.characters = characters
-                    print(characters)
                 }
             } catch {
                 print("Failed to decode: ", error)
