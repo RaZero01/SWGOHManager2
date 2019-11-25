@@ -64,7 +64,7 @@ struct StarsAndGuildSelector: View {
                             .cornerRadius(8)
                         }.sheet(isPresented: $showGuild){
                             
-                            if (self.guildData != nil){
+                            if ((self.guildData != nil) && (self.playersData != nil)){
                                 GuildView(guild: self.guildData!, players: self.playersData!, rarity: self.stars, character: self.character, ship: self.ship)
                             } else{
                                 ZStack{

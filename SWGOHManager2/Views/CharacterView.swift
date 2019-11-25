@@ -65,10 +65,10 @@ struct CharacterView: View {
        struct CharactersView: View {
            var character:Character
            var body: some View{
-                   VStack{
+                   HStack{
                        imageView(url: "https://swgoh.gg" + character.image)
                        Text(character.name)
-//                           Text("More about " + character.name)
+//                            .frame(width: 100)
                        }
                    }
 
@@ -104,7 +104,7 @@ struct imageView: View{
     }
     
     var body: some View{
-        Image(uiImage: UIImage(data: imageLoader.data) ?? UIImage()).resizable().frame(width: 200, height: 200)
+        Image(uiImage: UIImage(data: imageLoader.data) ?? UIImage()).resizable().frame(width: 70, height: 70)
     }
     
 }

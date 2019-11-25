@@ -8,4 +8,5 @@ pod 'Alamofire'
 pod "MBCircularProgressBar"
   # Pods for SWGOHManager2
 pod 'UICircularProgressRing'
+pod 'SwiftGifOrigin', '~> 1.7.0'
 end

@@ -76,7 +76,7 @@ struct GuildChooser: View {
                 .cornerRadius(8)
             }.sheet(isPresented: $showGuild){
                 
-                if (self.guildData != nil){
+                if ((self.guildData != nil) && (self.playersData != nil)){
                     GuildView(guild: self.guildData!, players: self.playersData!, rarity: 0, character: "", ship: "")
                 } else{
                     ZStack{

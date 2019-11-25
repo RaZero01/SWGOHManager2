@@ -25,7 +25,7 @@ struct DetailCharacterInfo: View {
             Text(character.role)
                 .font(.title)
             Text(character.description)
-                .frame(minHeight: 70)
+//                .frame(minHeight: 70)
                 .padding()
                 .font(.title)
             

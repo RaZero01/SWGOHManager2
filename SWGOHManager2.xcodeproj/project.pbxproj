@@ -163,6 +163,8 @@
 			dependencies = (
 			);
 			name = SWGOHManager2;
+			packageProductDependencies = (
+			);
 			productName = SWGOHManager2;
 			productReference = 2B7DBC5B23326C2900395745 /* SWGOHManager2.app */;
 			productType = "com.apple.product-type.application";
@@ -191,6 +193,8 @@
 				Base,
 			);
 			mainGroup = 2B7DBC5223326C2900395745;
+			packageReferences = (
+			);
 			productRefGroup = 2B7DBC5C23326C2900395745 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -223,12 +227,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SWGOHManager2/Pods-SWGOHManager2-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MBCircularProgressBar/MBCircularProgressBar.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBCircularProgressBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

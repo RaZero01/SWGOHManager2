@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (4.9.1)
   - MBCircularProgressBar (0.3.5)
+  - SwiftGifOrigin (1.7.0)
   - UICircularProgressRing (6.4.0)
 
 DEPENDENCIES:
   - Alamofire
   - MBCircularProgressBar
+  - SwiftGifOrigin (~> 1.7.0)
   - UICircularProgressRing
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - MBCircularProgressBar
+    - SwiftGifOrigin
     - UICircularProgressRing
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   UICircularProgressRing: 907613633e76e561b972a3868c95517d14c71006
 
-PODFILE CHECKSUM: f13eba027472463fadf5fec21a3efb4977672d15
+PODFILE CHECKSUM: 2b096bca0bb1091cdebc4de75576d75a3cd77db7
 
 COCOAPODS: 1.5.2

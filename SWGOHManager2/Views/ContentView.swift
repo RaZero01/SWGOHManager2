@@ -9,6 +9,7 @@
 import SwiftUI
 //import Alamofire
 import Combine
+import SwiftGifOrigin
 
 
 
@@ -21,7 +22,10 @@ struct ContentView: View {
     @State var shipFinder = false
     
     var body: some View {
+        
         VStack(spacing: 20) {
+            
+            
             Button(action: {
                 self.showCharacters.toggle()
             }) {
@@ -78,8 +82,12 @@ struct ContentView: View {
                 ShipFinder()
             }
         }
+        .background(
+            Image("Main2")
+        )
     }
 }
+
 
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {

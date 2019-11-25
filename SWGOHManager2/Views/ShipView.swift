@@ -7,9 +7,12 @@
 //
 
 import SwiftUI
+import Combine
+
 
 struct Ship: Decodable, Hashable {
     let name, image, description, alignment, role: String
+
 }
 
 class ShipsNetworkManager: ObservableObject {
@@ -42,6 +45,7 @@ class ShipsNetworkManager: ObservableObject {
 struct ShipView: View {
     
     @ObservedObject var shipsNetworkManager: ShipsNetworkManager = ShipsNetworkManager()
+    
     @State private var searchTerm: String = ""
     
     var body: some View {
@@ -63,13 +67,14 @@ struct ShipView: View {
     struct ShipView: View {
     var ship:Ship
     var body: some View{
-            VStack{
+            HStack{
+                
                 imageView(url: "https://swgoh.gg" + ship.image)
+                
                 Text(ship.name)
-//                    Text("More about " + ship.name)
+//                    .frame(width: 100)
                 }
             }
-
     }
 }
 
