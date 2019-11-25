@@ -47,32 +47,21 @@ struct CharacterView: View {
            var body: some View {
                NavigationView{
                 List{
-
                     SearchBar(text: $searchTerm)
-                    
                     ForEach(charactersNetworkManager.characters.filter{
                         self.searchTerm.isEmpty ? true : $0.name.localizedCaseInsensitiveContains(self.searchTerm)
                         }, id: \.self){ character in
 
                    NavigationLink(destination: DetailCharacterInfo(character: character)){
-                       CharactersView(character: character)}
+                      HStack{
+                        imageView(url: "https://swgoh.gg" + character.image)
+                        Text(character.name)
+                        }
+                    }
                }.navigationBarTitle(Text("Characters"))
                }
             }
-            
     }
-       
-       struct CharactersView: View {
-           var character:Character
-           var body: some View{
-                   HStack{
-                       imageView(url: "https://swgoh.gg" + character.image)
-                       Text(character.name)
-//                            .frame(width: 100)
-                       }
-                   }
-
-           }
 }
 
 class ImageLoader: ObservableObject {

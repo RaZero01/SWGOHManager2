@@ -22,25 +22,18 @@ struct ShipFinder: View {
                         self.searchTerm.isEmpty ? true : $0.name.localizedCaseInsensitiveContains(self.searchTerm)
                         }, id: \.self){ ship in
                             NavigationLink(destination: StarsAndGuildSelector(character: "", ship: ship.name)){
-                       ShipsView(ship: ship)
+                       HStack{
+                                              imageView(url: "https://swgoh.gg" + ship.image)
+                                              Text(ship.name)
+                       //                           Text("Find " + ship.name)
+                                              }
                             }
                }.navigationBarTitle(Text("Ships"))
+                    
                }
             }
             
     }
-       
-       struct ShipsView: View {
-           var ship: Ship
-           var body: some View{
-                   VStack{
-                       imageView(url: "https://swgoh.gg" + ship.image)
-                       Text(ship.name)
-//                           Text("Find " + ship.name)
-                       }
-                   }
-
-           }
 }
 
 struct ShipFinder_Previews: PreviewProvider {

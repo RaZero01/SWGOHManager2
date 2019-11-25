@@ -47,7 +47,7 @@ struct GuildView: View {
     
     var body: some View{
         
-        let kek = test(players: players, character: character, ship: ship, rarity: rarity)
+        let activePlayers = showPlayers(players: players, character: character, ship: ship, rarity: rarity)
         
         return (
         VStack {
@@ -83,7 +83,7 @@ struct GuildView: View {
             }
             
             List{
-                ForEach(kek, id:\.self){ player in
+                ForEach(activePlayers, id:\.self){ player in
                 Text(player)
                 }
             }
@@ -93,7 +93,7 @@ struct GuildView: View {
     }
 }
 
-func test(players: Players, character: String, ship: String, rarity: Int) -> [String]{
+func showPlayers(players: Players, character: String, ship: String, rarity: Int) -> [String]{
     var mass = [String]()
     
     for player in players.players{

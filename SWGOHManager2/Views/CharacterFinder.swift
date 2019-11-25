@@ -22,25 +22,17 @@ struct CharacterFinder: View {
                         self.searchTerm.isEmpty ? true : $0.name.localizedCaseInsensitiveContains(self.searchTerm)
                         }, id: \.self){ character in
                             NavigationLink(destination: StarsAndGuildSelector(character: character.name, ship: "")){
-                       CharactersView(character: character)
+                       HStack{
+                                              imageView(url: "https://swgoh.gg" + character.image)
+                                              Text(character.name)
+                       //                           Text("Find " + character.name)
+                                              }
                             }
                }.navigationBarTitle(Text("Characters"))
                }
             }
             
     }
-       
-       struct CharactersView: View {
-           var character:Character
-           var body: some View{
-                   VStack{
-                       imageView(url: "https://swgoh.gg" + character.image)
-                       Text(character.name)
-//                           Text("Find " + character.name)
-                       }
-                   }
-
-           }
 }
 
 struct CharacterFinder_Previews: PreviewProvider {

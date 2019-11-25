@@ -49,32 +49,24 @@ struct ShipView: View {
     @State private var searchTerm: String = ""
     
     var body: some View {
+        
         NavigationView{
             List{
-            SearchBar(text: $searchTerm)
+                SearchBar(text: $searchTerm)
                 ForEach(shipsNetworkManager.ships.filter{
                     self.searchTerm.isEmpty ? true : $0.name.localizedCaseInsensitiveContains(self.searchTerm)
-                    }
-                , id: \.self){
-                ship in
+                }
+                , id: \.self){ ship in
                 NavigationLink(destination: DetailShipInfo(ship: ship)){
-                    ShipView(ship: ship)
+                    HStack{
+                        imageView(url: "https://swgoh.gg" + ship.image)
+                        Text(ship.name)
+                    }
                 }
             }.navigationBarTitle(Text("Ships"))
-        }
-        }
-    }
-    struct ShipView: View {
-    var ship:Ship
-    var body: some View{
-            HStack{
                 
-                imageView(url: "https://swgoh.gg" + ship.image)
-                
-                Text(ship.name)
-//                    .frame(width: 100)
-                }
             }
+        }
     }
 }
 
